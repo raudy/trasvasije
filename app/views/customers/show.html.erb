@@ -1,0 +1,26 @@
+<div style="width:80%;margin:0 auto;">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Rut:</strong>
+	  <%= @customer.rut %>
+	</p>
+
+	<p>
+	  <strong>Nombre:</strong>
+	  <%= @customer.nombre %>
+	</p>
+
+	<p>
+	  <strong>Direccion:</strong>
+	  <%= @customer.direccion %>
+	</p>
+
+	<p>
+	  <strong>Fono:</strong>
+	  <%= @customer.fono %>
+	</p>
+
+	<%= link_to 'Editar', edit_customer_path(@customer) %> |
+	<%= link_to 'Volver', customers_path %>
+</div>

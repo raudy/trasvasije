@@ -68,6 +68,42 @@ a,a:visited{
 	font-size: 1.2em;
 }
 
-.imagen{
-	margin: 20px;
+.text-titulo{
+	text-align: center;
+	padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h1{
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    text-align: center;
+    color:black;
+}
+
+h2{
+    font-size: 1.5em; 
+    margin-bottom: 30px;
+    font-weight: normal;
+    color: #000;
+    text-align: justify;
+    vertical-align: middle;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+section{
+	width:80%; 
+	margin:0 auto;
+}
+
+/* Para el pie de pagina*/
+footer{
+    width: 100%;
+    color: white;
+    line-height: 81px;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
 }

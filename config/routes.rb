@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'quienes/index'
+
   devise_for :users
   get 'welcome/index'
   #get "inicio", to: "welcome#index"

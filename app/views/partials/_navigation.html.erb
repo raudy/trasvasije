@@ -2,13 +2,12 @@
 	<nav class="be-red white large-padding">
 		<ul class="no-list row center-xs middle-xs">
 			<li class="col-md">
-				<h1 class="no-margin" id="logo">Trasvasije Alex Soto</h1>
+				<div class="no-margin" id="logo">
+					<%= link_to "Trasvasije Alex Soto" , root_path %>
+				</div>
 			</li>
 			<li class="col-md">
-				<%= link_to "Inicio", root_path %>
-			</li>
-			<li class="col-md">
-				Quiénes somos
+				<%= link_to 'Quiénes somos', controller: 'quienes' %>	
 			</li>
 			<li class="col-md">
 				Productos

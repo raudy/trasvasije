@@ -1,5 +1,7 @@
-<h1>Bienvenidos a nuestra página</h1>
+<div style="width:80%;margin:0 auto;">
+	<h1>Bienvenidos a nuestra página</h1>
 
-<% if user_signed_in? %>
-	<h2>Bienvenido <%= current_user.email %></h2>
-<% end %>
+	<% if user_signed_in? %>
+		<h2>Bienvenido <%= current_user.email %></h2>
+	<% end %>
+</div>

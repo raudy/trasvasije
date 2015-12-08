@@ -1,0 +1,21 @@
+<div style="width:80%;margin:0 auto;">
+	<!--<p id="notice"><%= notice %></p>-->
+
+	<p>
+	  <strong>Código:</strong>
+	  <%= @product.codigo %>
+	</p>
+
+	<p>
+	  <strong>Nombre:</strong>
+	  <%= @product.nombre %>
+	</p>
+
+	<p>
+	  <strong>Categoría:</strong>
+	  <%= @product.category ? @product.category.nombre : "Asigne categoría" %>
+	</p>
+
+	<%= link_to 'Editar', edit_product_path(@product) %> |
+	<%= link_to 'Volver', products_path %>
+</div>

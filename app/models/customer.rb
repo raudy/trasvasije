@@ -1,4 +1,6 @@
 class Customer < ActiveRecord::Base
+	has_many :deliveries, :dependent => :nullify
+	has_many :invoices, :dependent => :nullify
 	validates :rut, :presence => {:message => "no puede estar en blanco"}, uniqueness: {case_sensitive: false ,message: "ya está registrado"}
 	validates_format_of :rut, :with => /\A(\d{1,3})\.(\d{3})\.(\d{3})\-(k|\d{1})\Z/i, :message => "no válido (Ej: 12.345.678-k)"
 	validates :nombre, :presence => {:message => "no puede estar en blanco"}, length: {in:3..40, too_short: "demasiado corto", too_long: "demasiado largo"}, uniqueness: {case_sensitive: false ,message: "ya está registrado"}

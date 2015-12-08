@@ -1,0 +1,26 @@
+<div style="width:80%;margin:0 auto;">
+	<!--<p id="notice"><%= notice %></p>-->
+
+	<p>
+	  <strong>Cantidad:</strong>
+	  <%= @detail.cantidad %>
+	</p>
+
+	<p>
+	  <strong>Horas-Hombre:</strong>
+	  <%= @detail.hh %>
+	</p>
+
+	<p>
+	  <strong>Producto:</strong>
+	  <%= @detail.product ? @detail.product.nombre : "Sin asignar" %>
+	</p>
+
+	<p>
+	  <strong>Factura:</strong>
+	  <%= @detail.invoice ? @detail.invoice.codigo : "Sin asignar" %>
+	</p>
+
+	<%= link_to 'Editar', edit_detail_path(@detail) %> |
+	<%= link_to 'Volver', details_path %>
+</div>

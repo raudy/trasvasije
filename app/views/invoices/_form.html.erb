@@ -1,0 +1,28 @@
+<%= form_for(@invoice) do |f| %>
+  <% @invoice.errors.full_messages.each do |message| %>
+    <div class="error white">
+      * <%= message %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.number_field :codigo, placeholder: "Código", class: "form-control", style: "width:250px" %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha, start_year: 2015 %>
+  </div>
+  <div class="field">
+    <%= f.text_field :neto, placeholder: "Nonto neto", class: "form-control", style: "width:250px" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :bruto, placeholder: "Nonto bruto", class: "form-control", style: "width:250px" %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id, "Cliente" %><br>
+    <%= collection_select( :invoice, :customer_id, Customer.all, :id, :nombre, { :multiple => false }, { :class => "my-custom-class" } ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar", class: "btn be-red white" %>
+  </div>
+<% end %>

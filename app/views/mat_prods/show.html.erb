@@ -1,0 +1,21 @@
+<div style="width:80%;margin:0 auto;">
+	<!--<p id="notice"><%= notice %></p>-->
+
+	<p>
+	  <strong>Cantidad:</strong>
+	  <%= @mat_prod.cantidad %>
+	</p>
+
+	<p>
+	  <strong>Materia Prima:</strong>
+	  <%= @mat_prod.material ? @mat_prod.material.nombre : "Sin asignar" %>
+	</p>
+
+	<p>
+	  <strong>Producto:</strong>
+	  <%= @mat_prod.product ? @mat_prod.product.nombre : "Sin asignar" %>
+	</p>
+
+	<%= link_to 'Editar', edit_mat_prod_path(@mat_prod) %> |
+	<%= link_to 'Volver', mat_prods_path %>
+</div>

@@ -1,0 +1,35 @@
+<div style="width:80%;margin:0 auto;">
+  <!--<p id="notice"><%= notice %></p>-->
+  <div class="text-titulo">
+    <h1>Listando Detalles de Facturas</h1>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Cantidad</th>
+        <th>Horas-Hombre</th>
+        <th>Producto</th>
+        <th>Factura</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @details.each do |detail| %>
+        <tr>
+          <td><%= detail.cantidad %></td>
+          <td><%= detail.hh %></td>
+          <td><%= detail.product ? detail.product.nombre : "Sin asignar" %></td>
+          <td><%= detail.invoice ? detail.invoice.codigo : "Sin asignar" %></td>
+          <td><%= link_to 'Mostrar', detail %></td>
+          <td><%= link_to 'Editar', edit_detail_path(detail) %></td>
+          <td><%= link_to 'Eliminar', detail, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Nuevo Detalle', new_detail_path %>
+</div>

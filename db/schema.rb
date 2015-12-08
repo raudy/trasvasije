@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208035357) do
+ActiveRecord::Schema.define(version: 20151208202619) do
 
   create_table "categories", force: :cascade do |t|
     t.integer  "codigo",     limit: 4
@@ -28,6 +28,53 @@ ActiveRecord::Schema.define(version: 20151208035357) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "deliveries", force: :cascade do |t|
+    t.decimal  "cantidad",              precision: 10
+    t.date     "fecha"
+    t.integer  "customer_id", limit: 4
+    t.integer  "material_id", limit: 4
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "deliveries", ["customer_id"], name: "index_deliveries_on_customer_id", using: :btree
+  add_index "deliveries", ["material_id"], name: "index_deliveries_on_material_id", using: :btree
+
+  create_table "details", force: :cascade do |t|
+    t.decimal  "cantidad",             precision: 10
+    t.decimal  "hh",                   precision: 10
+    t.integer  "product_id", limit: 4
+    t.integer  "invoice_id", limit: 4
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "details", ["invoice_id"], name: "index_details_on_invoice_id", using: :btree
+  add_index "details", ["product_id"], name: "index_details_on_product_id", using: :btree
+
+  create_table "invoices", force: :cascade do |t|
+    t.integer  "codigo",      limit: 4
+    t.date     "fecha"
+    t.decimal  "neto",                  precision: 10
+    t.decimal  "bruto",                 precision: 10
+    t.integer  "customer_id", limit: 4
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "invoices", ["customer_id"], name: "index_invoices_on_customer_id", using: :btree
+
+  create_table "mat_prods", force: :cascade do |t|
+    t.integer  "cantidad",    limit: 4
+    t.integer  "material_id", limit: 4
+    t.integer  "product_id",  limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "mat_prods", ["material_id"], name: "index_mat_prods_on_material_id", using: :btree
+  add_index "mat_prods", ["product_id"], name: "index_mat_prods_on_product_id", using: :btree
 
   create_table "materials", force: :cascade do |t|
     t.integer  "codigo",     limit: 4

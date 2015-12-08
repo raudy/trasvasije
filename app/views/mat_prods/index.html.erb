@@ -1,0 +1,34 @@
+<div style="width:80%;margin:0 auto;">
+  <!--<p id="notice"><%= notice %></p>-->
+  <div class="text-titulo">
+    <h1>Listando Relaciones Materia/Producto</h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Cantidad</th>
+        <th>Materia Prima</th>
+        <th>Producto</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @mat_prods.each do |mat_prod| %>
+        <tr>
+          <td><%= mat_prod.cantidad %></td>
+          <td><%= mat_prod.material ? mat_prod.material.nombre : "Sin asignar" %></td>
+          <td><%= mat_prod.product ? mat_prod.product.nombre : "Sin asignar" %></td>
+          <td><%= link_to 'Mostrar', mat_prod %></td>
+          <td><%= link_to 'Editar', edit_mat_prod_path(mat_prod) %></td>
+          <td><%= link_to 'Eliminar', mat_prod, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Nueva Materia/Producto', new_mat_prod_path %>
+</div>

@@ -1,0 +1,26 @@
+<div style="width:80%;margin:0 auto;">
+	<!--<p id="notice"><%= notice %></p>-->
+
+	<p>
+	  <strong>Cantidad:</strong>
+	  <%= @delivery.cantidad %>
+	</p>
+
+	<p>
+	  <strong>Fecha:</strong>
+	  <%= @delivery.fecha %>
+	</p>
+
+	<p>
+	  <strong>Cliente:</strong>
+	  <%= @delivery.customer ? @delivery.customer.nombre : "Sin asignar" %>
+	</p>
+
+	<p>
+	  <strong>Materia Prima:</strong>
+	  <%= @delivery.material ? @delivery.material.nombre : "Sin asignar" %>
+	</p>
+
+	<%= link_to 'Editar', edit_delivery_path(@delivery) %> |
+	<%= link_to 'Volver', deliveries_path %>
+</div>

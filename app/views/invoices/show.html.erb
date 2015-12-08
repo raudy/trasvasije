@@ -1,0 +1,31 @@
+<div style="width:80%;margin:0 auto;">
+  <!--<p id="notice"><%= notice %></p>-->
+
+  <p>
+    <strong>Código:</strong>
+    <%= @invoice.codigo %>
+  </p>
+
+  <p>
+    <strong>Fecha:</strong>
+    <%= @invoice.fecha %>
+  </p>
+
+  <p>
+    <strong>Monto Neto:</strong>
+    <%= @invoice.neto %>
+  </p>
+
+  <p>
+    <strong>Monto Bruto:</strong>
+    <%= @invoice.bruto %>
+  </p>
+
+  <p>
+    <strong>Cliente:</strong>
+    <%= @invoice.customer ? @invoice.customer.nombre : "Sin asignar" %>
+  </p>
+
+  <%= link_to 'Editar', edit_invoice_path(@invoice) %> |
+  <%= link_to 'Volver', invoices_path %>
+</div>

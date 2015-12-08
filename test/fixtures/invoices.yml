@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: 1
+  fecha: 2015-12-08
+  neto: 9.99
+  bruto: 9.99
+  customer_id: 
+
+two:
+  codigo: 1
+  fecha: 2015-12-08
+  neto: 9.99
+  bruto: 9.99
+  customer_id: 

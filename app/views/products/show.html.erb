@@ -13,7 +13,7 @@
 
 	<p>
 	  <strong>Categoría:</strong>
-	  <%= @product.category ? @product.category.nombre : "Asigne categoría" %>
+	  <%= @product.category ? @product.category.nombre : "Sin asignar" %>
 	</p>
 
 	<%= link_to 'Editar', edit_product_path(@product) %> |

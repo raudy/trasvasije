@@ -1,0 +1,25 @@
+<%= form_for(@detail) do |f| %>
+  <% @detail.errors.full_messages.each do |message| %>
+    <div class="error white">
+      * <%= message %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :cantidad, placeholder: "Cantidad", class: "form-control", style: "width:250px" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :hh, placeholder: "Horas-Hombre", class: "form-control", style: "width:250px" %>
+  </div>
+  <div class="field">
+    <%= f.label :product_id, "Producto" %><br>
+    <%= collection_select( :detail, :product_id, Product.all, :id, :nombre, { :multiple => false }, { :class => "my-custom-class" } ) %>
+  </div>
+  <div class="field">
+    <%= f.label :invoice_id, "Factura" %><br>
+    <%= collection_select( :detail, :invoice_id, Invoice.all, :id, :codigo, { :multiple => false }, { :class => "my-custom-class" } ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar", class: "btn be-red white" %>
+  </div>
+<% end %>

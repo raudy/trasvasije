@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources "contacts", only: [:new, :create]
   
   get 'menu/index'
 
@@ -21,6 +23,5 @@ Rails.application.routes.draw do
   get 'welcome/index'
   #get "inicio", to: "welcome#index"
 
-  root 'welcome#index'
-
+  root'welcome#index'
 end

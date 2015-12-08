@@ -1,4 +1,4 @@
 class ContactoController < ApplicationController
-  def index
+  def new
   end
 end

@@ -72,4 +72,5 @@ class MatProdsController < ApplicationController
     def mat_prod_params
       params.require(:mat_prod).permit(:cantidad, :material_id, :product_id)
     end
+        
 end

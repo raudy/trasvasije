@@ -2,14 +2,18 @@
 <html>
 	<head>
 		<div class="text-titulo">
-			<h1>Bienvenidos</h1>
-		</div>
+			<h1>¡Bienvenidos a nuestra página!</h1>
+			<% if user_signed_in? %>
+				<h4>Bienvenido <strong><%= current_user.email %></strong></h4>
+			<% end %>
+		</div>	
 	</head>
 	<body>
 		<section>
-			<% if user_signed_in? %>
-				<h2>Bienvenido <%= current_user.email %></h2>
-			<% end %>
+			<h3>Misión</h3>
+				<p><h2>Entregar la mejor calidad, servicio y precios de mercado. Para ello enfocaremos nuestro trabajo en un mejoramiento contínuo con los servicios prestados hacia ellos y así dar respuesta real y satisfactoria a sus requerimientos.</h2></p>
+			<h3>Visión</h3>
+				<p><h2>Convertirnos en aliados estratégicos de nuestros clientes, basados en nuestra capacidad de ser una empresa altamente flexible y proactiva, y que experimente un crecimiento sostenido en el tiempo.</h2></p>
 		</section>
 		<footer>
 			<div class="be-red">
@@ -18,3 +22,5 @@
 		</footer>
 	</body>
 </html>
+
+

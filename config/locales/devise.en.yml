@@ -3,19 +3,19 @@
 en:
   devise:
     confirmations:
-      confirmed: "Your email address has been successfully confirmed."
+      confirmed: "Tu dirección de correo electrónico se ha confirmado con éxito."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account is not activated yet."
+      already_authenticated: "Ya has iniciado sesión."
+      inactive: "Tu cuenta aún no está activada."
       invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
+      locked: "Tu cuenta está bloqueada."
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."
-      timeout: "Your session expired. Please sign in again to continue."
+      timeout: "Su sesión ha finalizado. Por favor ingresa de nuevo para continuar."
       unauthenticated: "Tienes que iniciar sesión o registrarte para continuar."
-      unconfirmed: "You have to confirm your email address before continuing."
+      unconfirmed: "Tienes que confirmar su dirección de correo electrónico antes de continuar."
     mailer:
       confirmation_instructions:
         subject: "Confirmation instructions"
@@ -47,13 +47,13 @@ en:
     unlocks:
       send_instructions: "Usted recibirá un correo electrónico con instrucciones para desbloquear su cuenta en pocos minutos."
       send_paranoid_instructions: "Si existe la cuenta, usted recibirá un correo electrónico con instrucciones sobre cómo desbloquearla en pocos minutos."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      unlocked: "Su cuenta ha sido desbloqueada con éxito. Por favor inicie sesión para continuar."
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
+      already_confirmed: "Ya se confirmó la cuenta, por favor intenta acceder"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
+      expired: "ha caducado, por favor solicite una nueva"
+      not_found: "Not found"
       not_locked: "was not locked"
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"

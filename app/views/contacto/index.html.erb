@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+		<script type="text/javascript">
+		  function send() {
+		    var link = 'mailto:nico.raudy@gmail.com?subject=Message from '
+		             +document.getElementById('email').value
+		             +'&body='+document.getElementById('email').value 
+		    window.location.href = link;
+			}
+		</script>
+
+
 	</head>
 	<body>
 		<section>
@@ -8,6 +19,8 @@
 				<div class="indent-left">
 					<div class="wrapper">
 						<article class="col-1">
+							<br>
+							<br>
 							<br>
 							<br>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.195698454598!2d-70.66866484952635!3d-33.52229720849417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dae3229d34f7%3A0xa48f177dde0fc86d!2sAv.+Fern%C3%A1ndez+Albano+565%2C+La+Cisterna%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1447628614073" width="260" height="223" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -19,25 +32,19 @@
 						</article>
 						<article class="col-2">
 						<div class="indent-left">
-								<h2>Contáctanos</h2>	
-							<form id="contact-form" action="mailto:nico.raudy@gmail.com" method="post" enctype="text/plain">
+								<h2>Envianos un mensaje</h2>
+								<br>
+							<br>	
+							<form method="post" action="" id="contact-form">
 								<fieldset>
-									<label>
-										<input type="text" value="Nombre" onBlur="if(this.value=='') this.value='Nombre'" onFocus="if(this.value =='Nombre' ) this.value=''" />
-									</label>
-									<label>
-									  <input type="text" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''" />
-									</label>
-									<label>
-									  <input type="text" value="Telefono" onBlur="if(this.value=='') this.value='Telefono'" onFocus="if(this.value =='Telefono' ) this.value=''" pattern="^[9|8|7|6]\d{8}$" minlenght="8" maxlength="8" />
-									</label>
-									<textarea  onBlur="if(this.value=='') this.value='Message'" onFocus="if(this.value =='Message' ) this.value=''">Mensaje</textarea>
-									<div class="buttons-wrapper">
-										<a class="button" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
-										<a class="button" onClick="document.getElementById('contact-form').submit()">Enviar</a>
-										</div>
-									</div>
-								</fieldset>
+								<label>
+    								<input type="text" id="email" name="name" required>
+								</label>
+    						<div class="buttons-wrapper">
+    							<a class="button" onclick="send()" >Enviar</a>
+	    						<a class="button" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
+	    						</fieldset>
+    						</div>
 							</form>
 						</article>
 					</div>

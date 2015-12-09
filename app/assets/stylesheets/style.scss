@@ -38,6 +38,13 @@ a,a:visited{
 	background-color: #3498DB;
 }
 
+.be-blue{
+    background-color: #3498DB;
+    width: 130px;
+    color: black;
+    padding-left:20px;
+}
+
 .white{
 	color: #ECF0F1;
 }
@@ -243,3 +250,9 @@ table, th, td {
             }
         .buttons-wrapper {padding:18px 0 0 0;text-align:right}
         .buttons-wrapper a {margin-left:15px}
+
+.centrado{
+margin-left: auto;
+  margin-right: auto;
+    
+}

@@ -1,2 +1,19 @@
-<h1>Menú de Empleados</h1>
-<p>Find me in app/views/menu/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<tbody>
+  <nav class="be-blue white">
+  <table>
+    <tr><td><%= link_to "Clientes", customers_path, class: "form-control"%></td></tr>
+    <tr><td><%= link_to "Entrega", deliveries_path, class: "form-control "%></td></tr>
+    <tr><td><%= link_to "Materias",materials_path, class: "form-control"%></td></tr>
+    <tr><td><%= link_to "Productos", products_path, class: "form-control"%></td></tr>
+    <tr><td><%= link_to "Materia/Producto", mat_prods_path, class: "form-control"%></td></tr>
+    <tr><td><%= link_to "Categoría", categories_path, class: "form-control"%></td></tr>
+    <tr><td><%= link_to "Facturas", invoices_path, class: "form-control"%></td></tr>
+    <tr><td><%= link_to "Detalles Factura", details_path, class: "form-control"%></td></tr>
+  </table>
+  </nav>
+</tbody>
+</html>

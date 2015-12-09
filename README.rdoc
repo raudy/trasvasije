@@ -1,28 +1,39 @@
-== README
+== LÉEME
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+En este fichero, se documentan las medidas necesarias para conseguir un correcto funcionamiento de la aplicación.
 
-Things you may want to cover:
+Requerimientos necesarios:
 
-* Ruby version
+* Versión de Ruby
 
-* System dependencies
+-> Ruby 2.0.0 o +
 
-* Configuration
+* Dependencias del sistema
 
-* Database creation
+-> mysql 5.5 o +
+-> Rails 4.2.0 o +
+-> gem 'mysql2'
+-> gem 'devise'
+-> gem 'rut_validation'
+-> gem 'mail_form'
+-> gem 'simple_form'
 
-* Database initialization
+* Configuración
 
-* How to run the test suite
+Dentro de la carpeta del proyecto (trasvasije), debes ingresar el siguiente comando:
+-> bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+* Creación de la base de datos
 
-* Deployment instructions
+Una vez conectado al usuario root en la base de datos (mysql), debes ingresar lo siguiente:
+-> GRANT ALL ON ruby_development.* TO ruby@localhost IDENTIFIED BY 'ruby123';
+-> GRANT ALL ON ruby_test.* TO ruby@localhost IDENTIFIED BY 'ruby123';
 
-* ...
+Por último, dentro de la carpeta del proyecto, ingresas:
+-> rake db:create
 
+* Inicialización de la base de datos
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Dentro de la carpeta del proyecto debes ingresar:
+-> rake db:migrate
+-> rake db:seed

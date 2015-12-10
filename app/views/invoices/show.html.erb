@@ -28,4 +28,30 @@
 
   <%= link_to 'Editar', edit_invoice_path(@invoice) %> |
   <%= link_to 'Volver', invoices_path %>
+
+  <p>
+    <strong><h3>Detalles asignados a esta Factura:</h3></strong>
+  </p>
+  <p>
+    <table>
+      <thead>
+          <tr>
+            <th>Cantidad</th>
+            <th>Horas-Hombre</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+      <tbody>
+        <% Detail.all.each do |detail| %>
+          <tr>
+            <% if @invoice.codigo==detail.invoice.codigo %>
+              <td><%= detail.cantidad %></td>
+              <td><%= detail.hh %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </p>
+
 </div>

@@ -9,13 +9,13 @@ en:
     failure:
       already_authenticated: "Ya has iniciado sesión."
       inactive: "Tu cuenta aún no está activada."
-      invalid: "Invalid %{authentication_keys} or password."
+      invalid: "%{authentication_keys} o contraseña no válido."
       locked: "Tu cuenta está bloqueada."
       last_attempt: "You have one more attempt before your account is locked."
-      not_found_in_database: "Invalid %{authentication_keys} or password."
+      not_found_in_database: "%{authentication_keys} o contraseña no válido."
       timeout: "Su sesión ha finalizado. Por favor ingresa de nuevo para continuar."
       unauthenticated: "Tienes que iniciar sesión o registrarte para continuar."
-      unconfirmed: "Tienes que confirmar su dirección de correo electrónico antes de continuar."
+      unconfirmed: "Tienes que confirmar tu dirección de correo electrónico antes de continuar."
     mailer:
       confirmation_instructions:
         subject: "Confirmation instructions"
@@ -41,9 +41,9 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Su cuenta ha sido actualizada correctamente."
     sessions:
-      signed_in: "Has iniciado sesión con éxito."
-      signed_out: "Has cerrado sesión con éxito."
-      already_signed_out: "Has cerrado sesión con éxito."
+      signed_in: ""
+      signed_out: ""
+      already_signed_out: ""
     unlocks:
       send_instructions: "Usted recibirá un correo electrónico con instrucciones para desbloquear su cuenta en pocos minutos."
       send_paranoid_instructions: "Si existe la cuenta, usted recibirá un correo electrónico con instrucciones sobre cómo desbloquearla en pocos minutos."

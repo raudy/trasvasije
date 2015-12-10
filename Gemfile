@@ -18,10 +18,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+#Gemas añadidas
+
 # Validar un Rut
 gem 'rut_validation'
 # Gestión de cuentas de usuarios
 gem "devise"
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pagos/index'
+
   #resources "contacts", only: [:new, :create]
   
   get 'menu/index'

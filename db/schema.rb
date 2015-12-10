@@ -113,12 +113,4 @@ ActiveRecord::Schema.define(version: 20151208202619) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "deliveries", "customers"
-  add_foreign_key "deliveries", "materials"
-  add_foreign_key "details", "invoices"
-  add_foreign_key "details", "products"
-  add_foreign_key "invoices", "customers"
-  add_foreign_key "mat_prods", "materials"
-  add_foreign_key "mat_prods", "products"
-  add_foreign_key "products", "categories"
 end

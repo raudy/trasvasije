@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
-		<script type="text/javascript">
-		  function send() {
-		    var link = 'mailto:nico.raudy@gmail.com?subject=Message from '
-		             +document.getElementById('email').value
-		             +'&body='+document.getElementById('email').value 
-		    window.location.href = link;
+	<script language="JavaScript">
+		function ValidarFormulario(f)
+		{
+		if (f.Nombre.value == "" || f.Email.value == ""|| f.Telefono.value == ""|| f.Mensaje.value == "" )
+			{
+			alert("Debe Introducir todos los campos");
 			}
-		</script>
-
-
+		else
+			{
+			alert("Atencion: Los datos del formulario son correctos. Los datos seran enviados");
+			f.submit();
+			}
+		}
+	</script>
 	</head>
 	<body>
 		<section>
@@ -21,30 +24,33 @@
 						<article class="col-1">
 							<br>
 							<br>
-							<br>
-							<br>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.195698454598!2d-70.66866484952635!3d-33.52229720849417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dae3229d34f7%3A0xa48f177dde0fc86d!2sAv.+Fern%C3%A1ndez+Albano+565%2C+La+Cisterna%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1447628614073" width="260" height="223" frameborder="0" style="border:0" allowfullscreen></iframe>
 								<h3>Datos:</h3>
 								<dl>
-									<dt><span>Telephone:</span>  +1 800 603 6035</dt>
+									<dt><span>Telefono:</span>  +1 800 603 6035</dt>
 									<dt><span>E-mail:</span> <a href="#">nico.raudy@gmail.com</a></dt>
 								</dl>
 						</article>
 						<article class="col-2">
 						<div class="indent-left">
-								<h2>Envianos un mensaje</h2>
-								<br>
-							<br>	
-							<form method="post" action="" id="contact-form">
+								<h2>Contáctanos</h2>
+							<form id="contact-form" action="mailto:nico.raudy@gmail.com" method="post" ENCTYPE="text/plain">
 								<fieldset>
-								<label>
-    								<input type="text" id="email" name="name" required>
-								</label>
-    						<div class="buttons-wrapper">
-    							<a class="button" onclick="send()" >Enviar</a>
-	    						<a class="button" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
-	    						</fieldset>
-    						</div>
+									<label>
+										<input type="text" name="Nombre" value="Nombre" onBlur="if(this.value=='') this.value='Nombre'" onFocus="if(this.value =='Nombre' ) this.value=''" maxlength="20"/>
+									</label>
+									<!--<label>
+										<input type="text" name="Email" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''" pattern="^[a-zA-Z0-9.!#$%*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"/>
+									</label>-->
+									<label>
+										<input type="text" name="Telefono" value="Telefono" onBlur="if(this.value=='') this.value='Telefono'" onFocus="if(this.value =='Telefono' ) this.value=''" pattern="^[9|8|7|6]\d{8}$" minlenght="8" maxlength="8" />
+									</label>
+										<textarea  name="Mensaje" onBlur="if(this.value=='') this.value='Message'" onFocus="if(this.value =='Message' ) this.value=''">Mensaje</textarea>
+								</fieldset>
+								<div class="buttons-wrapper">
+									<a class="button" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
+									<a class="button" onClick="document.getElementById('contact-form').submit()">Enviar</a>
+								</div>
 							</form>
 						</article>
 					</div>
@@ -53,7 +59,7 @@
 		</section>
 		<footer>
 			<div class="be-red">
-				Avda. Elías Fernández Albano # 565 La cisterna – Santiago
+			Avda. Elías Fernández Albano # 565 La cisterna – Santiago
 		    </div>
 		</footer>
 	</body>

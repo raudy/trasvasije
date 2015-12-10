@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <div class="text-titulo">
-    <h1>¡Bienvenidos a Trasvasije!</h1>
-  </div>  
+    <div class="text-titulo">
+    <div style='text-shadow: -1px 0 #090, 1px 0 #090, 0 1px #090, 0 -1px #090; margin-bottom:10px;'>
+      <img src='<%= asset_path 'logo.jpg' %>' /><h1>Bienvenido a Transvasije</h1>
+    </div>   
 </head>
-<tbody>
-<section>
-  <nav class="be-blue white">
-  <table>
-    <tr><td><%= link_to "Clientes", customers_path, class: "form-control"%></td></tr>
-    <tr><td><%= link_to "Entrega", deliveries_path, class: "form-control "%></td></tr>
-    <tr><td><%= link_to "Materias",materials_path, class: "form-control"%></td></tr>
-    <tr><td><%= link_to "Productos", products_path, class: "form-control"%></td></tr>
-    <tr><td><%= link_to "Materia/Producto", mat_prods_path, class: "form-control"%></td></tr>
-    <tr><td><%= link_to "Categoría", categories_path, class: "form-control"%></td></tr>
-    <tr><td><%= link_to "Facturas", invoices_path, class: "form-control"%></td></tr>
-    <tr><td><%= link_to "Detalles Factura", details_path, class: "form-control"%></td></tr>
-  </table>
-  </nav>
-  </section>
-</tbody>
+<body>
+  <div id="menuVertical">
+    <ul> 
+      <li><%= link_to "Clientes", customers_path%></li>
+      <li><%= link_to "Entrega", deliveries_path%></li>
+      <li><%= link_to "Materias",materials_path%></li>
+      <li><%= link_to "Productos", products_path%></li>
+      <li><%= link_to "Materia/Producto", mat_prods_path%></li>
+      <li><%= link_to "Categoría", categories_path%></li>
+      <li><%= link_to "Facturas", invoices_path%></li>
+      <li><%= link_to "Detalles Factura", details_path%></li>
+    </ul>
+</div>
+</body>
 </html>

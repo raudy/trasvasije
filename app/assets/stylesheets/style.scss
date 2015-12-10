@@ -190,7 +190,7 @@ table, th, td {
 .wrapper {width:100%;overflow:hidden}
 .indent-left {padding-left: 20px}
 .button {
-    display:inline-block;
+    display: inline-block;
     padding:0 24px;
     margin-left:2px;
     margin-bottom:2px;
@@ -222,16 +222,13 @@ table, th, td {
         padding:0;
         }           
             #contact-form label {
-                padding-left:0px;
-                padding-top:20px;
                 display:block;
                 height:50px;
             }
             
             #contact-form input {
                 width:323px;
-                padding-left:150px;
-                padding-bottom: 60px;
+                padding:12px 20px;
                 margin:0;
                 font-family:Arial, Helvetica, sans-serif;
                 font-size:14px;
@@ -241,10 +238,54 @@ table, th, td {
                 background:#fff;
                 outline:none;
             }
-        .buttons-wrapper {padding:40px 0 0 0;text-align:right}
-        .buttons-wrapper a {margin-left:15px}
+            #contact-form textarea {
+                overflow:auto;
+                height:130px;
+                width:563px;
+                padding:12px 20px;
+                margin:0;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:14px;
+                line-height:1.214em;
+                color:#808080;
+                border:1px solid #e6e6e6;
+                background:#fff;
+                outline:none;
+         }
+     .buttons-wrapper {padding:18px 0 0 0;text-align:right}
+     .buttons-wrapper a {margin-left:15px}
 
 .centrado{
     margin-left: auto;
     margin-right: auto;   
 }
+
+
+/*Menu para la empresa*/
+
+ #menuVertical ul{
+    list-style-type:none;
+    border:5px;
+    border-radius:9px;
+    text-decoration: none;
+ }
+    
+ #menuVertical ul {font-size: 20px; color:blue;}
+
+ #menuVertical li{ 
+    margin:0px; 
+    background:linear-gradient(#fff 0%,#dedede 100%); 
+    background:-moz-linear-gradient(#fff 0%,#dedede 100%); 
+    background:-ms-linear-gradient(#fff 0%,#dedede 100%); 
+    background:-o-linear-gradient(#fff 0%,#dedede 100%); 
+    background:-webkit-linear-gradient(#fff 0%,#dedede 100%); 
+    border:solid 5px #fff; 
+    border-radius:15px; 
+    padding:10px; 
+    width: 15%;
+ } 
+
+ #menuVertical li a:hover{ 
+     border:solid 4px #fff; 
+     color:blue; 
+ }
